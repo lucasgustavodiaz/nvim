@@ -27,7 +27,7 @@ lspconfig.setup {
 
 mason_null_ls.setup({
   -- list of formatters & linters for mason to install
-  ensure_installed = { "eslint_d", "prettier", "lua-language-server", "stylua", "css-lsp", "html-lsp", "tailwindcss-language-server", "typescript-language-server", "deno", "prettierd" },
+  ensure_installed = { "eslint_d", "lua-language-server", "stylua", "css-lsp", "html-lsp", "tailwindcss-language-server", "typescript-language-server", "deno", "prettierd" },
   -- auto-install configured formatters & linters (with null-ls)
   automatic_installation = true,
 })
