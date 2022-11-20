@@ -8,7 +8,8 @@ bufferline.setup({
     always_show_bufferline = false,
     show_buffer_close_icons = false,
     show_close_icon = false,
-    color_icons = true
+    color_icons = true,
+    show_duplicate_prefix = false
   },
   highlights = {
     separator = {
