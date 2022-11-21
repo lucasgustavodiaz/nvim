@@ -1,9 +1,10 @@
 local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
 
 keymap.set('n', 'x', '"_x')
 
 --Leader
-keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true })
+keymap.set("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 -- Increment/decrement
