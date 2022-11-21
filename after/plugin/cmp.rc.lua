@@ -2,6 +2,8 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
 
+require("luasnip/loaders/from_vscode").lazy_load()
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -11,7 +13,7 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping.complete() ,
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
@@ -19,8 +21,10 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
+    { name = 'luasnip' },
     { name = 'nvim_lsp' },
-    { name = 'buffer' },
+    { name = 'buffer' }, 
+    { name = 'path' },
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
