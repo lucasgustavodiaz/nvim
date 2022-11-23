@@ -56,6 +56,8 @@ return packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
   
+  use 'numToStr/Comment.nvim' -- Commenting
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Commenting commentstring for treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
