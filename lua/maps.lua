@@ -1,9 +1,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Do not yank with x
 keymap.set('n', 'x', '"_x')
 
---Leader
+-- Leader
 keymap.set("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
