@@ -33,11 +33,21 @@ return packer.startup(function(use)
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
-  use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'numToStr/Comment.nvim' -- Commenting
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Commenting commentstring for treesitter
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'akinsho/nvim-bufferline.lua'
+  use 'nvim-lualine/lualine.nvim' -- Statusline
+  use 'akinsho/toggleterm.nvim'
+  use 'lewis6991/impatient.nvim'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'folke/zen-mode.nvim'
 
-  -- Completion
+  -- Cmp
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
@@ -45,40 +55,33 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-emoji"
   use 'saadparwaiz1/cmp_luasnip'
   
+  -- LSP
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig' -- LSP
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'jayp0521/mason-null-ls.nvim'
   use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'github/copilot.vim'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
-  
-  use 'numToStr/Comment.nvim' -- Commenting
-  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Commenting commentstring for treesitter
+
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
+
+  -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'folke/zen-mode.nvim'
-  -- use({
-  --   "iamcco/markdown-preview.nvim",
-  --   run = function() vim.fn["mkdp#util#install"]() end,
-  -- })
-  use 'github/copilot.vim'
-  use 'akinsho/nvim-bufferline.lua'
+
+  -- Git
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
-  use 'akinsho/toggleterm.nvim'
-  use 'lewis6991/impatient.nvim'
+
   if packer_bootstrap then
     require("packer").sync()
   end
