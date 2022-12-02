@@ -17,6 +17,9 @@ vim.opt.smartindent = true
 vim.opt.breakindent = true
 vim.opt.expandtab = true
 
+-- Disable nvim intro
+vim.opt.shortmess:append "sI"
+
 -- search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true 
