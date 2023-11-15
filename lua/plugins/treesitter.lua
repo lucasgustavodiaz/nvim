@@ -7,8 +7,7 @@ return {
 			ensure_installed = {
 				"astro",
         "bash",
-        "c"
-				"cmake",
+        "c",
 				"cpp",
 				"css",
         "html",
