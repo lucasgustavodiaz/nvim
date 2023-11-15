@@ -6,7 +6,7 @@ return {
 			vim.list_extend(opts.ensure_installed, {
 				"stylua",
 				"selene",
-				"luacheck",
+				-- "luacheck",
 				"shellcheck",
 				"shfmt",
         "html-lsp",
