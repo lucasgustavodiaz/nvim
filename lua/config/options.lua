@@ -13,7 +13,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.number = true
 
 -- Relative line numbers
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 vim.opt.title = true
 vim.opt.autoindent = true
