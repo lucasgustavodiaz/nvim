@@ -5,6 +5,9 @@
 -- Set leader key
 vim.g.mapleader = " "
 
+-- Set list hide characters 
+vim.opt.list = false
+
 -- Encoding
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
