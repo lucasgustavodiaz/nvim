@@ -58,3 +58,30 @@ vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 if vim.fn.has("nvim-0.8") == 1 then
 	vim.opt.cmdheight = 0
 end
+
+-- enable spanish spell on markdown only
+-- local markdown_spell = vim.api.nvim_create_augroup("markdownSpell", {})
+-- vim.api.nvim_create_autocmd(
+--     "FileType",
+--     {
+--         pattern = "markdown",
+--         callback = function()
+--             vim.opt.spelllang = "es"
+--             vim.opt.spell = true
+--         end,
+--         group = markdown_spell
+--     }
+-- )
+-- vim.api.nvim_create_autocmd(
+--     { "BufRead", "BufNewFile" },
+--     {
+--         pattern = "*.md",
+--         callback = function()
+--             vim.opt.spelllang = "es"
+--             vim.opt.spell = true
+--         end,
+--         group = markdown_spell
+--     }
+-- )
+
+vim.opt.spelllang = {"es", "en"} 
