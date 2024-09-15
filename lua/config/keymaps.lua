@@ -64,8 +64,10 @@ keymap.set("n", "<C-j>", function()
 	vim.diagnostic.goto_next()
 end, opts)
 
+-- Utils HSl color
 keymap.set("n", "<leader>r", function()
 	require("luks.hsl").replaceHexWithHSL()
 end, {desc = "Replace hex with HSL"})
 
+-- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
