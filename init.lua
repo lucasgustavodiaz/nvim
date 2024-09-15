@@ -10,9 +10,9 @@ vim.print = _G.dd
 local os = vim.loop.os_uname().sysname
 
 if os == "Darwin" then
-  require('macos')
+  require('luks.macos')
 elseif os == "Linux" then
-  require('linux')
+  require('luks.linux')
 elseif os == "Windows_NT" then
   require('luks.windows')
 else
