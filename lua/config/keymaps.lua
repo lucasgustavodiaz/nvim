@@ -11,9 +11,9 @@ keymap.set('n', 'x', '"_x')
 -- Do not yank with d
 keymap.set('n', 'd', '"_d')
 
--- Increment/decrement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+-- Increment/decrement numbers on normal mode
+-- keymap.set("n", "+", "<C-a>")
+-- keymap.set("n", "-", "<C-x>")
 
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
@@ -67,3 +67,5 @@ end, opts)
 keymap.set("n", "<leader>r", function()
 	require("luks.hsl").replaceHexWithHSL()
 end, {desc = "Replace hex with HSL"})
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
