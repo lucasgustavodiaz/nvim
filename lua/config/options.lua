@@ -85,3 +85,6 @@ end
 -- )
 
 vim.opt.spelllang = {"es", "en"} 
+
+-- fix checkhealth on windows
+vim.opt.shellcmdflag = "-c"
