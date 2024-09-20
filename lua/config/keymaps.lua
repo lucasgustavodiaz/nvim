@@ -69,5 +69,9 @@ keymap.set("n", "<leader>r", function()
 	require("luks.hsl").replaceHexWithHSL()
 end, {desc = "Replace hex with HSL"})
 
+keymap.set("n", "<leader>i", function()
+	require("luks.lsp").toggleInlayHints()
+end)
+
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
