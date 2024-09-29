@@ -71,7 +71,7 @@ end, {desc = "Replace hex with HSL"})
 
 keymap.set("n", "<leader>i", function()
 	require("luks.lsp").toggleInlayHints()
-end)
+end, {desc = "Toggle inlay hints"})
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
